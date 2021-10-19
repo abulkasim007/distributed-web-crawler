@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SearchIndexerWorker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
