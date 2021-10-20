@@ -30,7 +30,10 @@ namespace Services
 
             string indexPath = Path.Combine(basePath, "index");
 
-            System.IO.Directory.Delete(indexPath, true);
+            if (System.IO.Directory.Exists(indexPath))
+            {
+                System.IO.Directory.Delete(indexPath, true);
+            }
 
             this.fSDirectory = FSDirectory.Open(indexPath);
 
