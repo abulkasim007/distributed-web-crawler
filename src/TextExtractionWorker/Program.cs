@@ -23,7 +23,7 @@ namespace TextExtractionWorker
                  })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddSingleton<IEventHandler<HtmlDownloadedTEEvent>, HtmlDownloadedTEEventHandler>();
+                    services.AddSingleton<IEventHandler<HtmlDownloadedForTextExtractionEvent>, HtmlDownloadedForTextExtractionEventHandler>();
 
                     services.AddServiceBus();
                 });

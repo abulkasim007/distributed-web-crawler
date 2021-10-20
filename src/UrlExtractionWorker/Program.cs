@@ -23,7 +23,7 @@ namespace UrlExtractionWorker
                  })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddSingleton<IEventHandler<HtmlDownloadedUEEvent>, HtmlDownloadedUEEventHandler>();
+                    services.AddSingleton<IEventHandler<HtmlDownloadedForUrlExtractionEvent>, HtmlDownloadedForUrlExtractionEventHandler>();
 
                     services.AddServiceBus();
 

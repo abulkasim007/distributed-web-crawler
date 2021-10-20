@@ -3,14 +3,14 @@ using DataStructures;
 
 namespace Events
 {
-    public class HtmlDownloadedUEEvent : IEvent
+    public class HtmlDownloadedForTextExtractionEvent : IEvent
     {
-        public HtmlDownloadedUEEvent()
+        public HtmlDownloadedForTextExtractionEvent()
         {
 
         }
 
-        public HtmlDownloadedUEEvent(Url url, string html)
+        public HtmlDownloadedForTextExtractionEvent(Url url, string html)
         {
             Url = url;
             Html = html;
@@ -20,6 +20,6 @@ namespace Events
 
         public string Html { get; set; }
 
-        public int Port => 5555;
+        public int Port => 5554;
     }
 }
