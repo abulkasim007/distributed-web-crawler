@@ -1,6 +1,6 @@
 ﻿using Abstractions;
 using EventHandlers;
-using Messages;
+using Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServiceBus;

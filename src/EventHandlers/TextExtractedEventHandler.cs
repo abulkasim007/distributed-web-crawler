@@ -1,6 +1,6 @@
 ﻿using Abstractions;
 using Services;
-using Messages;
+using Events;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 

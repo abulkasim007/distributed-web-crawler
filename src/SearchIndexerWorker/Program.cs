@@ -1,6 +1,6 @@
 ﻿using Abstractions;
 using EventHandlers;
-using Messages;
+using Events;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
