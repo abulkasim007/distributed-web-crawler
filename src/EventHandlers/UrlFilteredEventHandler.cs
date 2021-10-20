@@ -1,6 +1,6 @@
 ﻿using Abstractions;
 using Services;
-using Messages;
+using Events;
 using System.Threading.Tasks;
 
 namespace EventHandlers
@@ -25,13 +25,13 @@ namespace EventHandlers
                 return;
             }
 
-            HtmlDownloadedTEEvent htmlDownloadedTEEvent = new(@event.Url, html);
+            HtmlDownloadedForTextExtractionEvent htmlDownloadedForTextExtractionEvent = new(@event.Url, html);
 
-            this.bus.Publish(htmlDownloadedTEEvent);
+            this.bus.Publish(htmlDownloadedForTextExtractionEvent);
 
-            HtmlDownloadedUEEvent htmlDownloadedUEEvent = new(@event.Url, html);
+            HtmlDownloadedForUrlExtractionEvent htmlDownloadedForUrlExtractionEvent = new(@event.Url, html);
 
-            this.bus.Publish(htmlDownloadedUEEvent);
+            this.bus.Publish(htmlDownloadedForUrlExtractionEvent);
         }
     }
 }

@@ -1,16 +1,16 @@
 ﻿using Abstractions;
 using DataStructures;
 
-namespace Messages
+namespace Events
 {
-    public class HtmlDownloadedTEEvent : IEvent
+    public class HtmlDownloadedForTextExtractionEvent : IEvent
     {
-        public HtmlDownloadedTEEvent()
+        public HtmlDownloadedForTextExtractionEvent()
         {
 
         }
 
-        public HtmlDownloadedTEEvent(Url url, string html)
+        public HtmlDownloadedForTextExtractionEvent(Url url, string html)
         {
             Url = url;
             Html = html;

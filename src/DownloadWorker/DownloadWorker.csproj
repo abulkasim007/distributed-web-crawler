@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EventHandlers\EventHandlers.csproj" />
-    <ProjectReference Include="..\Messages\Messages.csproj" />
     <ProjectReference Include="..\ServiceBus\ServiceBus.csproj" />
   </ItemGroup>
 

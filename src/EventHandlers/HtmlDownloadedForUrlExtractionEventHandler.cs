@@ -1,25 +1,25 @@
 ﻿using Abstractions;
 using Services;
 using DataStructures;
-using Messages;
+using Events;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
 namespace EventHandlers
 {
-    public class HtmlDownloadedUEEventHandler : IEventHandler<HtmlDownloadedUEEvent>
+    public class HtmlDownloadedForUrlExtractionEventHandler : IEventHandler<HtmlDownloadedForUrlExtractionEvent>
     {
         private readonly IBus bus;
-        private readonly ILogger<HtmlDownloadedUEEventHandler> logger;
+        private readonly ILogger<HtmlDownloadedForUrlExtractionEventHandler> logger;
 
-        public HtmlDownloadedUEEventHandler(IBus bus, ILogger<HtmlDownloadedUEEventHandler> logger)
+        public HtmlDownloadedForUrlExtractionEventHandler(IBus bus, ILogger<HtmlDownloadedForUrlExtractionEventHandler> logger)
         {
             this.bus = bus;
             this.logger = logger;
         }
 
-        public Task Handle(HtmlDownloadedUEEvent @event)
+        public Task Handle(HtmlDownloadedForUrlExtractionEvent @event)
         {
             IEnumerable<Url> urls = UrlExtractor.Extract(@event.Url, @event.Html);
 

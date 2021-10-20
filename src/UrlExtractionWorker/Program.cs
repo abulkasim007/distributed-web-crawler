@@ -1,6 +1,6 @@
 ﻿using Abstractions;
 using EventHandlers;
-using Messages;
+using Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServiceBus;
@@ -23,7 +23,7 @@ namespace UrlExtractionWorker
                  })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddSingleton<IEventHandler<HtmlDownloadedUEEvent>, HtmlDownloadedUEEventHandler>();
+                    services.AddSingleton<IEventHandler<HtmlDownloadedForUrlExtractionEvent>, HtmlDownloadedForUrlExtractionEventHandler>();
 
                     services.AddServiceBus();
 

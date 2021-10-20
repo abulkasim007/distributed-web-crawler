@@ -1,7 +1,7 @@
 ﻿using Abstractions;
 using DataStructures;
 
-namespace Messages
+namespace Events
 {
     public class UrlExaminedEvent : IEvent
     {

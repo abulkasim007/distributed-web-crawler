@@ -1,6 +1,6 @@
 ﻿using Abstractions;
 using EventHandlers;
-using Messages;
+using Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServiceBus;
@@ -23,7 +23,7 @@ namespace TextExtractionWorker
                  })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddSingleton<IEventHandler<HtmlDownloadedTEEvent>, HtmlDownloadedTEEventHandler>();
+                    services.AddSingleton<IEventHandler<HtmlDownloadedForTextExtractionEvent>, HtmlDownloadedForTextExtractionEventHandler>();
 
                     services.AddServiceBus();
                 });

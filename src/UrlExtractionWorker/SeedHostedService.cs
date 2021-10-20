@@ -1,6 +1,6 @@
 ﻿using Abstractions;
 using DataStructures;
-using Messages;
+using Events;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Threading;

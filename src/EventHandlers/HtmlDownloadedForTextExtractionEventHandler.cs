@@ -1,25 +1,25 @@
 ﻿using Abstractions;
 using Services;
 using DataStructures;
-using Messages;
+using Events;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System;
 
 namespace EventHandlers
 {
-    public class HtmlDownloadedTEEventHandler : IEventHandler<HtmlDownloadedTEEvent>
+    public class HtmlDownloadedForTextExtractionEventHandler : IEventHandler<HtmlDownloadedForTextExtractionEvent>
     {
         private readonly IBus bus;
-        private readonly ILogger<HtmlDownloadedTEEventHandler> logger;
+        private readonly ILogger<HtmlDownloadedForTextExtractionEventHandler> logger;
 
-        public HtmlDownloadedTEEventHandler(IBus bus, ILogger<HtmlDownloadedTEEventHandler> logger)
+        public HtmlDownloadedForTextExtractionEventHandler(IBus bus, ILogger<HtmlDownloadedForTextExtractionEventHandler> logger)
         {
             this.bus = bus;
             this.logger = logger;
         }
 
-        public Task Handle(HtmlDownloadedTEEvent @event)
+        public Task Handle(HtmlDownloadedForTextExtractionEvent @event)
         {
             Text text = TextExtractor.Extract(@event.Html);
 
