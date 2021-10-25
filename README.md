@@ -13,7 +13,7 @@ Functional demonstration of
 9. Extract, transform, and load (ETL) process
 10. Stream processing
 11. Asyoncronous processing
-
+![Process diagram](DWC.png?raw=true)
 ## Workers:
 1. Download Worker: 
                     Activated by UrlFilteredEvent
