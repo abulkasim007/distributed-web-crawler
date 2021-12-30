@@ -48,3 +48,5 @@ Functional demonstration of
 ## Notes:
 Download, Url Extraction, Url Examiner, Text Extraction workers are scalable, that means you may run as many instances of this processes you want. Url filter hosts a in memory bloom filter which is not distributed. To do so you need to incorporate REDIS based bloom filter or something so. Search index worker also hosts an in-memory Lucene search engine exposed by a thin web service and therefore not scalable, you should use Solr or Elastic search to do so. I used ZeroMQ for distributed messaging which in my opinion needs to be replaced by RabbitMQ for high throughput and performance. You should be able to search through http://localhost:5000/Search?query=kasim. https://www.wikipedia.org/ which is the seed.
 
+## How to Run:
+Make sure you have .Net Core 5 or higher installed in your machine. src/Publish-Windows.bat will compile and build the worker executables. src/Run.bat will run all the workers.
